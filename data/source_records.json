@@ -1,0 +1,227 @@
+{
+  "meters": [
+    {
+      "meter": "FM18",
+      "probe": "B89",
+      "model": "FO-4",
+      "site": "line-a",
+      "medium": "food-water",
+      "range": [
+        5,
+        150
+      ],
+      "flow_unit": "L/min",
+      "total_unit": "L"
+    },
+    {
+      "meter": "FM19",
+      "probe": "B90",
+      "model": "FO-4",
+      "site": "store",
+      "medium": "food-water",
+      "range": [
+        5,
+        180
+      ],
+      "flow_unit": "L/min",
+      "total_unit": "L"
+    },
+    {
+      "meter": "REF7",
+      "probe": "Q1",
+      "model": "FL-2",
+      "site": "line-a",
+      "medium": "food-water",
+      "range": [
+        5,
+        180
+      ],
+      "flow_unit": "L/min",
+      "total_unit": "L"
+    }
+  ],
+  "certificates": [
+    {
+      "id": "C51",
+      "meter": "FM18",
+      "probe": "B89",
+      "range": [
+        5,
+        150
+      ],
+      "from": "2026-10-01T00:00:00+08:00",
+      "to": "2027-01-01T00:00:00+08:00"
+    },
+    {
+      "id": "C52",
+      "meter": "FM19",
+      "probe": "B90",
+      "range": [
+        5,
+        180
+      ],
+      "from": "2026-10-01T00:00:00+08:00",
+      "to": "2027-01-01T00:00:00+08:00"
+    },
+    {
+      "id": "C58",
+      "meter": "REF7",
+      "probe": "Q1",
+      "range": [
+        5,
+        180
+      ],
+      "from": "2026-10-01T00:00:00+08:00",
+      "to": "2027-01-01T00:00:00+08:00"
+    }
+  ],
+  "certificate_revision": [
+    {
+      "id": "F17",
+      "cert": "C51",
+      "probe": "B89",
+      "affected_range": [
+        70,
+        150
+      ],
+      "effective_from": "2026-11-27T10:00:00+08:00",
+      "effective_to": "2026-11-27T12:00:00+08:00",
+      "reported_at": "2026-11-28T08:08:00+08:00"
+    }
+  ],
+  "requests": [
+    {
+      "id": "W1",
+      "company": "plant-a",
+      "site": "line-a",
+      "range": [
+        30,
+        120
+      ],
+      "medium": "food-water",
+      "start": "2026-11-27T09:30:00+08:00",
+      "end": "2026-11-27T12:00:00+08:00"
+    },
+    {
+      "id": "W2",
+      "company": "plant-b",
+      "site": "line-b",
+      "range": [
+        5,
+        60
+      ],
+      "medium": "food-water",
+      "start": "2026-11-28T10:00:00+08:00",
+      "end": "2026-11-28T18:00:00+08:00"
+    }
+  ],
+  "handoffs": [
+    {
+      "id": "H1",
+      "site": "line-a",
+      "old_meter": "FM18",
+      "new_meter": "FM19",
+      "at": "2026-11-27T11:00:00+08:00"
+    },
+    {
+      "id": "H2",
+      "meter": "FM18",
+      "returned_at": "2026-11-27T11:15:00+08:00",
+      "accepted_at": "2026-11-27T12:00:00+08:00"
+    }
+  ],
+  "samples": [
+    {
+      "id": "S18",
+      "meter": "FM18",
+      "probe": "B89",
+      "site": "line-a",
+      "medium": "food-water",
+      "flow_range": [
+        51,
+        119
+      ],
+      "cuts": {
+        "2026-11-27T10:15:00+08:00": 350,
+        "2026-11-27T10:30:00+08:00": 1220,
+        "2026-11-27T11:00:00+08:00": 2870,
+        "2026-11-27T11:10:00+08:00": 3010
+      }
+    },
+    {
+      "id": "S19",
+      "meter": "FM19",
+      "probe": "B90",
+      "site": "line-a",
+      "medium": "food-water",
+      "flow_range": [
+        41,
+        105
+      ],
+      "cuts": {
+        "2026-11-27T11:00:00+08:00": 102,
+        "2026-11-27T11:25:00+08:00": 1802
+      }
+    },
+    {
+      "id": "R7",
+      "meter": "REF7",
+      "probe": "Q1",
+      "site": "line-a",
+      "medium": "food-water",
+      "flow_range": [
+        52,
+        117
+      ],
+      "reference": true,
+      "cuts": {
+        "2026-11-27T10:15:00+08:00": 100,
+        "2026-11-27T10:30:00+08:00": 960
+      }
+    },
+    {
+      "id": "R8",
+      "meter": "REF7",
+      "probe": "Q1",
+      "site": "line-b",
+      "medium": "food-water",
+      "flow_range": [
+        50,
+        117
+      ],
+      "reference": true,
+      "cuts": {
+        "2026-11-27T10:30:00+08:00": 100,
+        "2026-11-27T11:00:00+08:00": 1660
+      }
+    }
+  ],
+  "agreements": [
+    {
+      "id": "CA6",
+      "site": "line-a",
+      "issuer": "plant-a",
+      "counterparty": "buyer-b",
+      "reference_allowed": true
+    }
+  ],
+  "receipts": [
+    {
+      "id": "V1",
+      "agreement": "CA6",
+      "issued_at": "2026-11-27T17:00:00+08:00",
+      "lines": [
+        {
+          "sample": "S18",
+          "from": "2026-11-27T10:15:00+08:00",
+          "to": "2026-11-27T11:00:00+08:00"
+        },
+        {
+          "sample": "S19",
+          "from": "2026-11-27T11:00:00+08:00",
+          "to": "2026-11-27T11:25:00+08:00"
+        }
+      ]
+    }
+  ]
+}
